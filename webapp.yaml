@@ -22,17 +22,17 @@ spec:
         env:
         - name: USER_NAME 
           valueFrom:
-            secretKeyReg:
+            secretKeyRef:
               name: mongo-secret
               key: mongo-user
         - name: USER_PWD
           valueFrom:
-            secretKeyReg:
+            secretKeyRef:
               name: mongo-secret
               key: mongo-password
         - name: DB_URL
           valueFrom:
-            configMapKeyReg:
+            configMapKeyRef:
               name: mongo-config
               key: mongo-url
 

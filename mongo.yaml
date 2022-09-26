@@ -22,12 +22,12 @@ spec:
         env:
         - name: MONGO_INITDB_ROOT_USERNAME 
           valueFrom:
-            secretKeyReg:
+            secretKeyRef:
               name: mongo-secret
               key: mongo-user
         - name: MONGO_INITDB_ROOT_PASSWORD
           valueFrom:
-            secretKeyReg:
+            secretKeyRef:
               name: mongo-secret
               key: mongo-password
 
